@@ -2,7 +2,6 @@ import cv2
 from deepface import DeepFace as df
 
 # Load Haar Cascade for face detection
-# Ensure the XML file path is correct; replace with the full path if needed
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 # Initialize the webcam (camera index 0 is usually the default webcam)
@@ -12,8 +11,6 @@ cap = cv2.VideoCapture(0)
 while cap.isOpened():
     # Capture a frame from the webcam
     ret, frame = cap.read()
-
-    # If frame not captured successfully, exit the loop
     if not ret:
         break
 
